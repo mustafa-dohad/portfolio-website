@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icons" href="images/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa-Dohad</title>
+    <script src="https://kit.fontawesome.com/6511b77dea.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+    height: 25vh;
+}
+
+/* -----------------------------------------NAVBAR----------------------------------------- */
+.container{
+    padding: 20px 10%;
+    box-shadow: 3px 3px 3px #888888;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.name{
+    font-size: 1.6rem;
+    font-family: Comfortaa, sans-serif;
+    font-weight: bolder;
+}
+.name a{
+        text-decoration: none;
+        color: black;
+    }
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: Comfortaa, sans-serif;
+}
+
+nav ul li a:hover{
+    border-bottom: 3px solid #ff004f;
+}
+/*  */
+nav .fas{
+    display: none;
+}
+/* nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+} */
+/* -----------------------------------------NAVBAR----------------------------------------- */
+
+/* -----------------------------------------CONTACT SECTION----------------------------------------- */
+.container2{
+    padding: 20px 10%;
+}
+.contact{
+    margin-top: 16.25rem;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-left{
+    flex-basis: 35%;
+    padding-bottom: 3rem;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left h1{
+    font-family: "Gowun Batang", serif;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.contact-left p{
+    margin-top: 1.875rem;
+    margin-bottom: 3rem;
+    font-family: "Gowun Batang", serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.contact-left p span{
+    font-weight: 900;
+}
+
+.social-icons{
+    margin-top: 1.875rem;
+    margin-bottom: 3rem;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 0.9375rem;
+    color: #ababab;
+}
+.social-icons a:hover{
+    color: #ff004f;
+}
+.butn{
+    margin-top: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff004f;
+    height: 4rem;
+    width: 12.5rem;
+    border-radius: 50px;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;  
+    isolation: isolate;
+}
+
+
+.btn{
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    font-family: Comfortaa, sans-serif;
+}
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 0.9375rem;
+    margin: 0.937rem 0;
+    color: #fff;
+    font-size: 1.125rem;
+    border-radius: 6px;
+
+
+}
+input, textarea::placeholder{
+    font-family: Comfortaa, sans-serif;
+    font-size: 1.3rem;
+}
+
+#msg{
+    display: block;
+    justify-content: flex-start;
+    color: rgb(20, 136, 20);
+    font-size: 1rem;
+    font-family: Comfortaa, sans-serif;
+}
+/* -----------------------------------------CONTACT SECTION----------------------------------------- */
+
+/* -----------------------------------------MEDIA TAG FOR 1200px SCREEN SIZE----------------------------------------- */
+@media only screen and (max-width: 1200px){
+
+    #header{
+        height: 15vh;
+    }
+    .contact-left{
+        flex-basis: 100%;
+    }
+    .contact-right{
+        flex-basis: 100%;
+    }
+    .button-submit{
+        display: flex;
+        justify-content: center;
+    }
+    .sub-title,  .email-info, .cv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-icons{
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+/* -----------------------------------------MEDIA TAG FOR 1200px SCREEN SIZE----------------------------------------- */
+
+
+/* -----------------------------------------MEDIA TAG FOR 900px SCREEN SIZE----------------------------------------- */
+@media only screen and (max-width: 900px){
+   
+    nav .fas{
+        display: block;
+        font-size: 1.7rem;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -12.5rem;
+        width: 12.5rem;
+        height: 100vh;
+        padding-top: 3.125rem;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 1.563rem;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 1.563rem;
+        left: 1.563rem;
+        cursor: pointer;
+    }
+
+    #header{
+        height: 15vh;
+    }
+    .contact-left{
+        flex-basis: 100%;
+
+    }
+    .contact-right{
+        flex-basis: 100%;
+    }
+}
+/* -----------------------------------------MEDIA TAG FOR 900px SCREEN SIZE----------------------------------------- */
+
+
+/* -----------------------------------------MEDIA TAG FOR 430px SCREEN SIZE----------------------------------------- */
+@media only screen and (max-width:430px){
+    .contact-left h1{
+        font-size: 2rem;
+    }
+    .contact-left p{
+        font-size: 0.9rem;
+    }
+
+}
+/* -----------------------------------------MEDIA TAG FOR 430px SCREEN SIZE----------------------------------------- */
+
+</style>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <p class="name"><a href="index.html">Mustafa-Dohad</a></p>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container2">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p class="email-info"><span>mustafamurtazadohad@gmail.com</span></p>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/mustafa-dohad" target="_blank"><i id="social1" class="fa-brands fa-linkedin fa-2xl"></i></a>
+                        <a href="https://github.com/mustafa-dohad" target="_blank"><i id="social2" class="fa-brands fa-github fa-2xl"></i></a>
+                        <a href="https://twitter.com/DohadMustafa" target="_blank"><i id="social3" class="fa-brands fa-x-twitter fa-2xl"></i></a>
+                        <a href="https://www.facebook.com/mustafamurtaza.dohadwala" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                    </div>
+                    <div class="cv">
+                        <div class="butn">
+                            <a href="" download class="btn">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Full Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Go Ahead, Im listening..."></textarea>
+                        <span id="msg"></span>
+                        <div class="button-submit">
+                            <button type="submit" class="butn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby44-hiaCALamEt6wB4DDLB7Ul6-HpjnR2m0Z7AO7B6oXy1CwyvM2fpgUI5x4pX_b3_/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeout(function () {
+                    msg.innerHTML = "";
+                }, 3000);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+
+</html>

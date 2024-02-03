@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icons" href="images/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa-Dohad</title>
+    <script src="https://kit.fontawesome.com/6511b77dea.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Lexend+Deca:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Lexend+Deca:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #header {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    /* -----------------------------------------NAVBAR----------------------------------------- */
+    .container {
+        padding: 20px 10%;
+        box-shadow: 3px 3px 3px #888888;
+        background-color: white;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .name {
+
+        font-size: 1.6rem;
+        font-family: Comfortaa, sans-serif;
+        font-weight: bolder;
+    }
+
+    .name a {
+        text-decoration: none;
+        color: black;
+    }
+
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+
+    nav ul li a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: Comfortaa, sans-serif;
+
+
+    }
+
+    nav ul li a:hover {
+        border-bottom: 3px solid #ff004f;
+    }
+
+    nav .fas {
+        display: none;
+    }
+
+    /* nav ul li a::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    } */
+
+    /* nav ul li a:hover::after {
+        width: 100%;
+    } */
+    /* -----------------------------------------NAVBAR----------------------------------------- */
+
+
+    /* -----------------------------------------ALERT----------------------------------------- */
+    .alert {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: auto;
+        border-radius: 15px;
+    }
+
+    .alert-msg {
+        padding: 15px;
+        background-color: #5c9aff;
+        text-align: center;
+        width: 100%;
+        border-top-left-radius: 20px 20px;
+        border-top-right-radius: 20px 20px;
+        isolation: isolate;
+
+    }
+
+    .alert-msg p {
+        font-size: 1.1rem;
+        font-family: "Nunito", sans-serif;
+    }
+
+    .alert-msg p a {
+        color: rgb(0, 0, 0);
+    }
+
+    .alert-msg p a:hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .dismiss {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        background-color: #4b7fd1;
+        /* background-color:#416cb0; */
+        width: 100%;
+        font-family: "Nunito", sans-serif;
+        border-bottom-left-radius: 20px 20px;
+        border-bottom-right-radius: 20px 20px;
+        font-size: large;
+        cursor: pointer;
+        isolation: isolate;
+    }
+
+    .dismiss:hover {
+        background-color: #416cb0;
+    }
+
+    /* -----------------------------------------ALERT----------------------------------------- */
+
+
+    /* -----------------------------------------SECOND CONTAINER (NAME, DESCRIPTION ETC)----------------------------------------- */
+    .container2 {
+        padding: 0 10%;
+
+    }
+
+    .landing {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .header-text {
+        margin-top: 20%;
+        font-size: 1.5rem;
+        width: 50%;
+    }
+
+    .job-title {
+        font-family: "Roboto Mono", monospace;
+        font-weight: 200;
+    }
+
+    .header-text h1 {
+        margin-top: 1.25rem;
+        font-size: 3.75rem;
+        font-family: "Gowun Batang", serif;
+        font-weight: 500;
+    }
+
+    .header-text h1 span {
+        color: #274aa3;
+        font-family: "Lexend Deca", sans-serif;
+        font-weight: 1000;
+        isolation: isolate;
+    }
+
+    .summary {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: "Gowun Batang", serif;
+        font-size: 1.3rem;
+        color: #62142c;
+        font-weight: bold;
+
+    }
+
+
+    .memoji {
+        width: 50%;
+        margin-top: 15%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* -----------------------------------------SECOND CONTAINER (NAME, DESCRIPTION ETC)----------------------------------------- */
+
+
+    /* -----------------------------------------MEDIA TAG FOR 1100px SCREEN SIZE----------------------------------------- */
+    @media only screen and (max-width: 1100px) {
+        .header-text {
+            width: 100%;
+        }
+
+        .memoji {
+            margin-top: 5%;
+            width: 100%;
+        }
+    }
+    /* -----------------------------------------MEDIA TAG FOR 1100px SCREEN SIZE----------------------------------------- */
+
+
+    /* -----------------------------------------MEDIA TAG FOR 875px SCREEN SIZE----------------------------------------- */
+    @media only screen and (max-width: 878px) {
+        .header-text {
+            width: 100%;
+        }
+
+        .memoji {
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        nav .fas {
+            display: block;
+            font-size: 1.7rem;
+        }
+
+        nav ul {
+            background: #ff004f;
+            position: fixed;
+            top: 0;
+            right: -12.5rem;
+            width: 12.5rem;
+            height: 100vh;
+            padding-top: 3.125rem;
+            z-index: 2;
+            transition: right 0.5s;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 1.563rem;
+        }
+
+        nav ul .fas {
+            position: absolute;
+            top: 1.563rem;
+            left: 1.563rem;
+            cursor: pointer;
+        }
+    }
+    /* -----------------------------------------MEDIA TAG FOR 1100px SCREEN SIZE----------------------------------------- */
+
+
+    /* -----------------------------------------MEDIA TAG FOR 750px SCREEN SIZE----------------------------------------- */
+    @media only screen and (max-width: 750px) {
+        .header-text {}
+
+        .header-text h1 {
+            font-size: 2.7rem;
+        }
+
+        .summary {
+            font-size: 1.3rem;
+        }
+    }
+    /* -----------------------------------------MEDIA TAG FOR 1100px SCREEN SIZE----------------------------------------- */
+
+
+    /* -----------------------------------------MEDIA TAG FOR 540px SCREEN SIZE----------------------------------------- */
+    @media only screen and (max-width: 540px) {
+        .header-text {
+            margin-top: 30%;
+            font-size: 1rem;
+        }
+
+        #header {
+            height: 0.9vh;
+        }
+
+        .header-text h1 {
+            font-size: 2.7rem;
+        }
+
+        .summary {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    /* -----------------------------------------MEDIA TAG FOR 540px SCREEN SIZE----------------------------------------- */
+
+
+    /* -----------------------------------------MEDIA TAG FOR 375px SCREEN SIZE----------------------------------------- */
+    @media only screen and (max-width: 375px) {
+        .memoji {
+            width: 100%;
+        }
+
+        .memoji img {
+            width: 100%;
+        }
+    }
+    /* -----------------------------------------MEDIA TAG FOR 375px SCREEN SIZE----------------------------------------- */
+</style>
+
+<body>
+    <div id="header">
+        <div class="container">
+
+            <nav>
+                <p class="name"><a href="index.html">Mustafa-Dohad</a></p>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+        </div>
+        <div class="alert" id="alert-box">
+            <div class="alert-msg">
+                <p>Hey there! I'm currently available and looking for 2024 Internship opportunities, so if you have
+                    something cool for me, please <a href="contact.html">let me know!</a> </p>
+            </div>
+            <div class="dismiss">
+                <h4 onclick="dismissAlert()">Dismiss</h4>
+            </div>
+        </div>
+        <div class="container2">
+
+            <div class="landing">
+
+                <div class="header-text">
+                    <p class="job-title">Front-End Developer</p>
+                    <h1>Hello there!<br> I'm <span>Mustafa Dohad.</span></h1>
+                    <p class="summary">Coding quirks, coffee addiction, hustling habits, and occasional naps - that's me
+                        in a nutshell.</p>
+                </div>
+                <div class="memoji">
+                    <img src="images/f293e3cb4502f4d9-sticker.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script>
+        var dismiss = document.getElementById("alert-box"); //
+        function dismissAlert() {
+            dismiss.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

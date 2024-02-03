@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icons" href="images/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa-Dohad</title>
+    <script src="https://kit.fontawesome.com/6511b77dea.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Lexend+Deca:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #header {
+        height: 10vh;
+    }
+
+    /* -----------------------------------------NAVBAR----------------------------------------- */
+    .container {
+        padding: 20px 10%;
+        box-shadow: 3px 3px 3px #888888;
+
+
+    }
+
+    nav {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+    .name {
+        font-size: 1.6rem;
+        font-family: Comfortaa, sans-serif;
+        font-weight: bolder;
+    }
+
+    .name a {
+        text-decoration: none;
+        color: black;
+    }
+
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+
+    nav ul li a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: Comfortaa, sans-serif;
+    }
+
+    nav ul li a:hover {
+        border-bottom: 3px solid #ff004f;
+    }
+
+    nav .fas {
+        display: none;
+    }
+
+    /* nav ul li a::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+
+    nav ul li a:hover::after {
+        width: 100%;
+
+    } */
+    /* -----------------------------------------NAVBAR----------------------------------------- */
+
+
+    /* -----------------------------------------ABOUT SECTION----------------------------------------- */
+    #about {
+        height: 100vh;
+        padding: 2rem 0;
+        color: #ababab;
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        height: 100vh;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .about-col-2 {
+        flex-basis: 60%;
+
+    }
+
+    .tab-titles {
+        display: flex;
+        margin: 1.25rem 0 2.5rem;
+        font-family: "Nunito", sans-serif;
+        color: #62abf5;
+    }
+
+    .tab-links {
+        margin-right: 3.125rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .tab-links::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+    }
+
+    .tab-links.active-link::after {
+        width: 50%;
+    }
+
+    /* -----------------------------------------ABOUT SECTION----------------------------------------- */
+
+
+    /* -----------------------------------------MY INFO----------------------------------------- */
+    .description {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-family: "Nunito", sans-serif;
+        font-weight: light;
+        color: black;
+    }
+
+    .description span {
+        font-weight: bolder;
+        font-size: 1.5rem;
+    }
+
+    .span01 {
+        color: #0048ff;
+    }
+
+    .span02 {
+        color: #97922c;
+    }
+
+    .span03 {
+        color: #ff0000;
+    }
+
+    .span04 {
+        color: rgb(215, 12, 215);
+    }
+
+    .span05 {
+        color: rgb(28, 159, 28);
+    }
+
+    .span06 {
+        color: rgb(57, 167, 198);
+    }
+
+    .span07,
+    .span08 {
+        color: rgb(141, 51, 51);
+    }
+
+    .span09 {
+        color: rgb(243, 109, 0);
+    }
+
+    /* -----------------------------------------MY INFO----------------------------------------- */
+
+
+    /* -----------------------------------------ALL THE CONTENTS THAT WILL APPEAR AND DISAPPEAR----------------------------------------- */
+    .tab-contents {
+        display: none;
+    }
+
+    .tab-contents.active-tab {
+        display: block;
+    }
+
+    /* -----------------------------------------ALL THE CONTENTS THAT WILL APPEAR AND DISAPPEAR----------------------------------------- */
+
+
+    /* -----------------------------------------SKILLS SECTION----------------------------------------- */
+    .parent-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 6rem;
+    }
+
+    .skills-container {
+        height: 10rem;
+        width: 40rem;
+        margin: 1rem;
+        border-radius: 15px;
+        padding-top: 1rem;
+        /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
+        /* background-color: #ed713b; */
+        background-color: #E63946;
+    }
+
+    .skills-container ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 2rem;
+    }
+
+    .skills-container li {
+        margin: 1rem;
+        font-family: "Nunito", sans-serif;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+    }
+
+    .skills-container:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .skills-container h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        color: #ffffff;
+        font-family: "Comfortaa", serif;
+    }
+
+    /* -----------------------------------------SKILLS SECTION----------------------------------------- */
+
+
+    /* -----------------------------------------EXPERIENCE SECTION----------------------------------------- */
+    .experience-container {
+        display: flex;
+        height: 70vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .alert-msg {
+        padding: 15px;
+        background-color: #03fca9;
+        text-align: center;
+        width: 100%;
+        height: 50vh;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .alert-msg:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .alert-msg p {
+        font-size: 1.5rem;
+        font-family: "Nunito", sans-serif;
+        color: #000000;
+    }
+
+    .alert-msg p a {
+        color: rgb(0, 0, 0);
+    }
+
+    .alert-msg p a:hover {
+        color: rgb(255, 255, 255);
+    }
+
+    /* -----------------------------------------SKILLS SECTION----------------------------------------- */
+
+
+    /* -----------------------------------------MY IMAGE----------------------------------------- */
+    .about-col-1 {
+        flex-basis: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+
+    }
+
+    .about-col-1 img {
+        width: 100%;
+        border-radius: 2rem;
+    }
+
+    /* -----------------------------------------MY IMAGE----------------------------------------- */
+
+
+    /* -----------------------------------------MEDIA TAG FOR 1200px SCREEN SIZE----------------------------------------- */
+    @media only screen and (max-width: 1200px) {
+        .about-col-1 {
+            margin-top: 3rem;
+            flex-basis: 100%;
+            margin-bottom: 3rem;
+        }
+
+        .about-col-2 {
+            flex-basis: 100%;
+            height: auto;
+        }
+
+        .about-col-1 img {
+            width: 60%;
+        }
+
+        .skills-container {
+            width: 100%;
+        }
+
+        .parent-container {
+            margin-top: 1rem;
+        }
+    }
+    /* -----------------------------------------MEDIA TAG FOR 1200px SCREEN SIZE----------------------------------------- */
+
+
+    /* -----------------------------------------MEDIA TAG FOR 850px SCREEN SIZE----------------------------------------- */
+    @media only screen and (max-width: 850px) {
+        .header-text {
+            margin-top: 100%;
+            font-size: 1rem;
+        }
+
+        .header-text h1 {
+            font-size: 1.875rem;
+        }
+
+        nav .fas {
+            display: block;
+            font-size: 1.7rem;
+        }
+
+        nav ul {
+            background: #ff004f;
+            position: fixed;
+            top: 0;
+            right: -12.5rem;
+            width: 12.5rem;
+            height: 100vh;
+            padding-top: 3.125rem;
+            z-index: 2;
+            transition: right 0.5s;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 1.563rem;
+        }
+
+        nav ul .fas {
+            position: absolute;
+            top: 1.563rem;
+            left: 1.563rem;
+            cursor: pointer;
+        }
+
+        .about-col-1 img {
+            width: 60%;
+            margin-bottom: 3rem;
+        }
+
+        #about {
+            height: 125vh;
+        }
+
+        .alert-msg img {
+            width: 14rem;
+            height: 14rem;
+        }
+    }
+    /* -----------------------------------------MEDIA TAG FOR 850px SCREEN SIZE----------------------------------------- */
+
+
+    /* -----------------------------------------MEDIA TAG FOR 700px SCREEN SIZE----------------------------------------- */
+    @media only screen and (max-width: 700px) {
+        .tab-links {
+            font-size: 1.125rem;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .about-col-1 img {
+            width: 60%;
+            margin-bottom: 3rem;
+        }
+
+        #about {
+            height: 150vh;
+        }
+
+        .description {
+            font-size: 1rem;
+
+        }
+
+        .alert-msg img {
+            width: 10rem;
+            height: 10rem;
+        }
+
+    }
+    /* -----------------------------------------MEDIA TAG FOR 700px SCREEN SIZE----------------------------------------- */
+
+
+    /* -----------------------------------------MEDIA TAG FOR 520px SCREEN SIZE----------------------------------------- */
+    @media only screen and (max-width: 520px) {
+        #about {
+            height: 120vh;
+        }
+
+        /* .description{
+        font-size: 0.8rem;
+    }*/
+        .description span {
+            font-size: 1rem;
+        }
+
+        .tab-links {
+            font-size: 1rem;
+        }
+
+        .about-col-2 {
+            width: 80%;
+        }
+
+        .skills-container {
+            height: 20rem;
+        }
+
+        .alert-msg img {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        .alert-msg p {
+            font-size: 1rem;
+        }
+
+    }
+    /* -----------------------------------------MEDIA TAG FOR 520px SCREEN SIZE----------------------------------------- */
+</style>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <p class="name"><a href="index.html">Mustafa-Dohad</a></p>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+
+        </div>
+    </div>
+    <div id="about">
+        <div class="row">
+            <div class="about-col-2">
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('aboutme')">About</p>
+                    <p class="tab-links" onclick="opentab('skill')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="aboutme">
+                    <p class="description">Hey, coding comrades! Let's skip the formalities - I'm a <span
+                            class="span01"> front-end developer </span> diving headfirst into the exciting world of
+                        <span class="span02"> Computer Programming and Analysis </span> at <span class="span03"> Seneca
+                            Polytechnic. </span> But there's more to me than just lines of code and tech jargon.
+
+                        <br><br><span class="span04"> Efficiency, </span> <span class="span04"> elegance, </span> and
+                        <span class="span04"> effectiveness </span> aren't just my code mantras; they spill over into my
+                        daily life. Picture someone meticulously organizing their sock drawer - that's me, finding zen
+                        in the little things.
+
+                        <br><br>When I'm not wrestling with code, you'll catch me in a <span class="span05"> chess
+                        </span> showdown, plotting my next move like it's a strategic masterpiece. Friends call me the
+                        <span class="span06"> unpopular cool kid </span> and yeah, I embrace it. I'm the guy who brings
+                        humor to the table and strategy to the game, whether it's <span class="span07"> coding </span>,
+                        or <span class="span08"> badminton. </span>
+
+                        <br><br>Now, let's talk <span class="span09"> pizza </span> - it's not just a food, it's a way
+                        of life. Hanging out with friends, sharing laughs, and savoring every cheesy bite - that's my
+                        kind of therapy.
+
+                        <br><br>While I won't claim the spotlight, I do take pride in being the guy who ensures
+                        everyone's having a blast. Not exactly the loudest, but definitely the one adding that touch of
+                        charm to any gathering.
+
+                        <br><br>In the early stages of my career, seeking the next adventure that clicks with my passion
+                        for code, games, and pizza. Ready to roll with me? <br><br><span class="span10">(P.S I'm seeking
+                            for internships 2024)</span>
+                    </p>
+
+                </div>
+
+                <div class="tab-contents" id="skill">
+                    <div class="parent-container">
+                        <div class="skills-container">
+                            <h1>Languages:</h1>
+                            <ul>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>JAVA-SCRIPT</li>
+                                <li>HTML/CSS</li>
+                                <li>BASH</li>
+                                <li>PYTHON</li>
+                            </ul>
+
+                        </div>
+                        <div class="skills-container">
+                            <h1>Tools:</h1>
+                            <ul>
+                                <li>OOP</li>
+                                <li>GIT</li>
+                                <li>GITHUB</li>
+                                <li>JIRA</li>
+                                <li>NETLIFY</li>
+                            </ul>
+                        </div>
+                        <div class="skills-container">
+                            <h1>Additional:</h1>
+                            <ul>
+                                <li>SQL</li>
+                                <li>BOOTSTRAP</li>
+                                <li>MICROSOFT OFFICE</li>
+                                <li>NOTION</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <div class="experience-container">
+
+                        <div class="alert-msg">
+                            <img src="images/experience.png" alt="">
+                            <p>Hey there! Open to exciting 2024 internship opportunities. While I'm relatively new
+                                to
+                                the field, my approach is marked by a fresh perspective. Let's discuss how I can
+                                bring a
+                                unique edge to your team! so if you have something cool for me, please <a
+                                    href="contact.html">let me know!</a> </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="about-col-1">
+                <img src="images/my-photo.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
