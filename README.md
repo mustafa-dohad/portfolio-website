@@ -1,6 +1,6 @@
 # 🚀 Welcome to My Digital Playground!
 
-Hey there, fellow tech aficionados! 👋 I'm Mustafa, and I invite you to explore the digital wonderland I've conjured up. Brace yourselves for a journey through my latest masterpiece - [**Mustafa Dohad Portfolio**](https://mustafa-dohad.netlify.app/) 🌐✨
+Hey there, fellow tech aficionados! 👋 I'm Mustafa, and I invite you to explore the digital wonderland I've conjured up. Brace yourselves for a journey through my latest masterpiece - [**Mustafa Dohad Portfolio**](https://mustafa-dohad.netlify.app/) 
 
 ## 🎬 Dive into the Experience
 
